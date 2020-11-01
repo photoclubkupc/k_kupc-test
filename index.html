@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="responsive.css">
+  <title>k_kupc official page</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<!-- drawer.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+<!-- jquery & iScroll -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+<!-- drawer.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js">
+</script>
+
+<script>$(function(){
+  $(".readmore").on("click", function() {
+      $(this).toggleClass("on-click");
+      $(".hide-text").slideToggle(1000);
+  });
+}); </script>
+
+<script>
+$(function(){
+   $('a[href^=#]').click(function() {
+      var speed = 400;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
+
+<!--フェード-->
+<script>$(function(){
+	$(window).scroll(function (){
+		$('.fadein').each(function(){
+			var elemPos = $(this).offset().top;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > elemPos - windowHeight + 0){
+				$(this).addClass('scrollin');
+			}
+		});
+	});
+});</script>
+
+<!--loading-->
+<script>
+  $(function() {
+  var h = $(window).height();
+   $('#loading__wrapper').css('display','none');
+   $('#is-loading ,#loading').height(h).css('display','block');
+  });
+ 
+  $(window).load(function () {
+   $('#is-loading').delay(900).fadeOut(800);
+   $('#loading').delay(600).fadeOut(300);
+   $('#loading__wrapper').css('display', 'block');
+  });
+ 
+ 
+  $(function(){
+   setTimeout('stopload()',10000);
+   });
+ 
+   function stopload(){
+    $('#loading__wrapper').css('display','block');
+    $('#is-loading').delay(900).fadeOut(800);
+    $('#loading').delay(600).fadeOut(300);
+  }
+ </script>
+
+</head>
+<div class="wrap">
+<body>
+    <!-- ローディングのアニメーション -->
+  <div id="is-loading">
+    <div id="loading">
+    <img src="camera-solid.svg" alt="loadingなう" />
+    </div>
+  </div>
+  <div id="loading__wrapper">
+
+  <div class="drawer drawer--right">
+  <header role="banner">
+        <button type="button" class="drawer-toggle drawer-hamburger">
+          <span class="sr-only">toggle navigation</span>
+          <span class="drawer-hamburger-icon"></span>
+        </button>
+        <nav class="drawer-nav" role="navigation">
+          <ul class="drawer-menu">
+            <li><a class="drawer-brand" href="#">Menu</a></li>
+            <li class="drawer-menu-item"><a class="menu-link" href="#">トップ</a></li>
+           <li class="drawer-menu-item"><a class="menu-link" href="#About">概要</a></li>
+           <li class="drawer-menu-item"><a class="menu-link" href="#News">新着情報</a></li>
+           <li class="drawer-menu-item"><a class="menu-link" href="#QandA">よくある質問</a></li>
+          </ul>
+        </nav>
+      <main role="main">
+      </main>
+      <script>
+        $(document).ready(function() {
+        $('.drawer').drawer();
+      });
+      </script>
+      </div>
+    </header>
+    <div class="header2">
+    <a href="#" class="header-logo fadein">K_KUPC</a>
+    <div class="nav-menu">
+      <ul class="menu fadein">
+      <li class="menu-item"><a class="menu-link" href="#">トップ</a></li>
+       <li class="menu-item"><a class="menu-link" href="#About">概要</a></li>
+       <li class="menu-item"><a class="menu-link" href="#News">新着情報</a></li>
+       <li class="menu-item"><a class="menu-link" href="#QandA">よくある質問</a></li>
+       <li class="menu-item"><a class="menu-link" href="https://www.instagram.com/k_kupc/">ギャラリー</a></li>
+       <a target="_blank" href="https://twitter.com/k_kupc/"><img class="sns-icon twitter" src="twitter-brands.svg"></a>
+       <a target="_blank" href="https://www.instagram.com/k_kupc/"><img class="sns-icon instagram" src="instagram-brands.svg"></a>
+      </ul>  
+    </div>
+  </div>
+  <div class="garally-wrapper">
+    <container>
+      <div class="garally filter">
+        <img class="photo filter-img" src="Garally/001.jpg">
+        <img class="photo filter-img" src="Garally/3.jpg">
+        <img class="photo filter-img" src="Garally/4.jpg">
+        <img class="photo filter-img" src="Garally/5.jpg">
+        <img class="photo filter-img" src="Garally/6.jpg">
+        <img class="photo filter-img" src="Garally/7.jpg">
+      </div>
+    </container>
+  </div>
+  <div class="about-wrapper" id="About">
+    <div class="container">
+      <div class="about fadein">
+        <h1>- About -</h1>
+        <div id="text-wrap">
+          <div class="show-text">
+           
+            ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。
+           
+                  </div>
+           
+           
+          <div class="hide-text">
+           
+            ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。ここに文章を入力。
+           
+                  </div>
+           
+                  <button class="readmore">READ MORE</button>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="news-wrapper fadein" id="News">
+    <div class="container fadein">
+      <h1>News</h1>
+      <div class="news">
+      <div class="cp_card04">
+        <div class="photo2"><img src="images.jpg" alt=""></div>
+        <div class="details">
+        <div class="category"><p>カテゴリー</p></div>
+        <div class="date"><span class="day">2016.06.21</span></div>
+        </div>
+        <div class="description">
+        <h1>記事タイトル</h1>
+        <div class="text">
+        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している...</p>
+        <a href="#0" class="">Read More</a>
+        </div>
+        </div>
+        </div>
+
+        <div class="cp_card04">
+          <div class="photo2"><img src="images.jpg" alt=""></div>
+          <div class="details">
+          <div class="category"><p>カテゴリー</p></div>
+          <div class="date"><span class="day">2016.06.21</span></div>
+          </div>
+          <div class="description">
+          <h1>記事タイトル</h1>
+          <div class="text">
+          <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している...</p>
+          <a href="#0" class="">Read More</a>
+          </div>
+          </div>
+          </div>
+
+          
+        </div>
+    </div>
+  </div>
+  <div class="QandA-wrapper" id="QandA">
+    <div class="container">
+      <h1>Q and A</h1>
+      <div class="cp_qa fadein">
+        <div class="cp_actab ">
+          <input id="cp_tabfour021" type="checkbox" name="tabs">
+          <div class="cp_plus">+</div>
+          <label for="cp_tabfour021">質問テキスト</label>
+          <div class="cp_actab-content">答えテキスト</div>
+        </div>
+        <div class="cp_actab">
+          <input id="cp_tabfour022" type="checkbox" name="tabs">
+          <div class="cp_plus">+</div>
+          <label for="cp_tabfour022">質問テキスト 質問テキスト</label>
+          <div class="cp_actab-content">答えテキスト</div>
+        </div>
+        <div class="cp_actab">
+          <input id="cp_tabfour023" type="checkbox" name="tabs">
+          <div class="cp_plus">+</div>
+          <label for="cp_tabfour023">質問テキスト 質問テキスト</label>
+          <div class="cp_actab-content">答えテキスト</div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="fadein">
+    <div class="container">
+      <p>©Kurume University Photography Club.201x-2020</p>
+    </div>
+  </footer>
+</div>
+</body>
+</div>
+</html>
